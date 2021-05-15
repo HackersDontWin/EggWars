@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="EggWars">
+    <output-path>$PROJECT_DIR$/../../../MC Servers/1.12.2 - Testing/plugins</output-path>
+    <root id="archive" name="EggWars.jar">
+      <element id="module-output" name="EggWars" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../../Repositories/EggWars/EggWars/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
