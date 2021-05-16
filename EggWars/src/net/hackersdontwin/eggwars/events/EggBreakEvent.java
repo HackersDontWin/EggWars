@@ -21,6 +21,9 @@ public class EggBreakEvent implements Listener {
 
 	@EventHandler
 	public void onPlayerInteract(PlayerInteractEvent e) {
+		if(e.getClickedBlock() == null) {
+			return;
+		}
 		if(e.getClickedBlock().getType() == Material.DRAGON_EGG) {
 			Location loc = e.getClickedBlock().getLocation();
 			loc.getBlock().setType(Material.AIR);

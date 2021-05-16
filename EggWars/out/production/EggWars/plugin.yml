@@ -1,3 +1,8 @@
 name: EggWars
 main: net.hackersdontwin.eggwars.EggWars
 version: 1.0
+
+commands:
+  admin:
+    usage: /<command>
+    description: An admin command for EggWars

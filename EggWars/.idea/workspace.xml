@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="91382b90-dfaa-44af-ad0c-cde9e4c308a8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/BlockManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/Generator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/BlockEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/InventoryEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/EggWars.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/EggWars.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/spigot_1_12_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/spigot_1_12_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EggWars.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EggWars.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/EggWars.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/EggWars.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/EggWars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/EggWars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/GeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/GeneratorManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/InventoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/EggBreakEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/EggBreakEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/GenetaorEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/GeneratorEvents.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1sZXkiPVI0hPpwirmaOp9Swimpz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="E:/Servers/Spigot/1.12.2 - EggWars/plugins" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91382b90-dfaa-44af-ad0c-cde9e4c308a8" name="Default Changelist" comment="" />
+      <created>1621081229782</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621081229782</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1117" y="439" key="FileChooserDialogImpl" timestamp="1621081623464">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1117" y="439" key="FileChooserDialogImpl/0.0.2560.1400/2560.464.1600.860/-1920.209.1920.1040@0.0.2560.1400" timestamp="1621081623464" />
+    <state x="760" y="274" key="SettingsEditor" timestamp="1621081824729">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="760" y="274" key="SettingsEditor/0.0.2560.1400/2560.464.1600.860/-1920.209.1920.1040@0.0.2560.1400" timestamp="1621081824729" />
+    <state x="2552" y="456" width="1616" height="947" maximized="true" key="dock-window-1" timestamp="1621114809170">
+      <screen x="2560" y="464" width="1600" height="860" />
+    </state>
+    <state x="2552" y="456" width="1616" height="947" maximized="true" key="dock-window-1/0.0.2560.1400/2560.464.1600.860/-1920.209.1920.1040@0.0.2560.1400" timestamp="1621114809170" />
+  </component>
+</project>
