@@ -6,12 +6,17 @@ import net.minecraft.server.v1_12_R1.NBTTagCompound;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_12_R1.inventory.CraftItemStack;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityPickupItemEvent;
+import org.bukkit.event.entity.ItemDespawnEvent;
+import org.bukkit.event.entity.ItemMergeEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.ArrayList;
 
 public class GeneratorEvents implements Listener {
 
@@ -45,7 +50,6 @@ public class GeneratorEvents implements Listener {
 		if(!(e.getEntity() instanceof Player)) {
 			return;
 		}
-
 		ItemStack is = e.getItem().getItemStack();
 		Location location = new Location(e.getItem().getWorld(), e.getItem().getLocation().getBlockX(), e.getItem().getLocation().getBlockY()-1, e.getItem().getLocation().getBlockZ());
 		net.minecraft.server.v1_12_R1.ItemStack nmsIS = CraftItemStack.asNMSCopy(is);
@@ -53,9 +57,25 @@ public class GeneratorEvents implements Listener {
 			NBTTagCompound tag = nmsIS.getTag();
 			if(tag.hasKey("item")) {
 				Generator generator = plugin.getGeneratorManager().getGeneratorList().get(location);
-				generator.removeItem();
+				if(generator == null) {
+					return;
+				}
+				generator.removeItem(e.getItem().getItemStack());
 			}
 		}
+	}
 
+	@EventHandler
+	public void onItemMerge(ItemMergeEvent e) {
+		if(CraftItemStack.asNMSCopy(e.getEntity().getItemStack()).hasTag() && CraftItemStack.asNMSCopy(e.getEntity().getItemStack()).getTag().hasKey("item")) {
+			e.setCancelled(true);
+		}
+	}
+
+	@EventHandler
+	public void onItemDespawn(ItemDespawnEvent e) {
+		if(CraftItemStack.asNMSCopy(e.getEntity().getItemStack()).hasTag() && CraftItemStack.asNMSCopy(e.getEntity().getItemStack()).getTag().hasKey("item")) {
+			e.setCancelled(true);
+		}
 	}
 }

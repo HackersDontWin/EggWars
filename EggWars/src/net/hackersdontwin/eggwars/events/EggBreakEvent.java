@@ -1,10 +1,7 @@
 package net.hackersdontwin.eggwars.events;
 
 import net.hackersdontwin.eggwars.EggWars;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.Material;
+import org.bukkit.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -28,11 +25,11 @@ public class EggBreakEvent implements Listener {
 			Location loc = e.getClickedBlock().getLocation();
 			loc.getBlock().setType(Material.AIR);
 
-			String teamName = getKey(ew.getTeamManager().getEggLocations(), loc);
+			String teamName = ew.getTeamManager().getAllEggs().get(loc).getTeamName();
+			Bukkit.getWorld("world").playSound(loc, Sound.ENTITY_LIGHTNING_THUNDER, 1.0F, 1.0F);
 			Bukkit.broadcastMessage(ChatColor.GOLD + teamName + "'s egg has been destroyed!");
 
-			ew.getTeamManager().removeRespawnableTeam(teamName);
-			ew.getTeamManager().removeEgg(teamName);
+			ew.getTeamManager().getAllEggs().get(loc).setHasEgg(false);
 		}
 	}
 

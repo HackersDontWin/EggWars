@@ -19,25 +19,41 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91382b90-dfaa-44af-ad0c-cde9e4c308a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/BlockManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/Generator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/BlockEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/InventoryEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="f2c40b83-1388-4722-b05b-feddb3dbce6d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/ConfigManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/Team.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/ConnectionEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/ShopEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/EggWars.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/EggWars.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/spigot_1_12_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/spigot_1_12_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EggWars.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EggWars.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/EggWars.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/EggWars.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EggWars/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/Generator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/Generator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/GeneratorManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/GeneratorManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/GeneratorManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/GeneratorManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/InventoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/InventoryManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/TeamManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/TeamManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/commands/AdminCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/commands/AdminCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/BlockEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/BlockEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/EggBreakEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/EggBreakEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/GeneratorEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/GeneratorEvents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/InventoryEvents$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/InventoryEvents$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/InventoryEvents$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/InventoryEvents$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/InventoryEvents$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/InventoryEvents$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/InventoryEvents.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EggWars/net/hackersdontwin/eggwars/events/InventoryEvents.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/EggWars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/EggWars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/Generator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/GeneratorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/GeneratorManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/InventoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/InventoryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/TeamManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/TeamManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/commands/AdminCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/commands/AdminCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/BlockEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/BlockEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/EggBreakEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/EggBreakEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/GenetaorEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/GeneratorEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/GeneratorEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/GeneratorEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/InventoryEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/hackersdontwin/eggwars/events/InventoryEvents.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +73,11 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1sZXkiPVI0hPpwirmaOp9Swimpz" />
+  <component name="ProjectId" id="1ser2ljoTMfRII8uriNZKl32F8k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -69,20 +85,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="E:/Servers/Spigot/1.12.2 - EggWars/plugins" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java/spigot/DiscordServerConsole" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.29238096" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="91382b90-dfaa-44af-ad0c-cde9e4c308a8" name="Default Changelist" comment="" />
-      <created>1621081229782</created>
+      <changelist id="f2c40b83-1388-4722-b05b-feddb3dbce6d" name="Default Changelist" comment="" />
+      <created>1621243691258</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1621081229782</updated>
+      <updated>1621243691258</updated>
     </task>
     <servers />
   </component>
@@ -99,17 +114,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1117" y="439" key="FileChooserDialogImpl" timestamp="1621081623464">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1621355029880">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1117" y="439" key="FileChooserDialogImpl/0.0.2560.1400/2560.464.1600.860/-1920.209.1920.1040@0.0.2560.1400" timestamp="1621081623464" />
-    <state x="760" y="274" key="SettingsEditor" timestamp="1621081824729">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1621355029880" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1621243769018">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="760" y="274" key="SettingsEditor/0.0.2560.1400/2560.464.1600.860/-1920.209.1920.1040@0.0.2560.1400" timestamp="1621081824729" />
-    <state x="2552" y="456" width="1616" height="947" maximized="true" key="dock-window-1" timestamp="1621114809170">
-      <screen x="2560" y="464" width="1600" height="860" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1621243769018" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1621282625302">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="2552" y="456" width="1616" height="947" maximized="true" key="dock-window-1/0.0.2560.1400/2560.464.1600.860/-1920.209.1920.1040@0.0.2560.1400" timestamp="1621114809170" />
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1621282625302" />
   </component>
 </project>

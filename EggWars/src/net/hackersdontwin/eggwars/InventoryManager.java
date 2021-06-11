@@ -17,20 +17,20 @@ public class InventoryManager {
 
 	private HashMap<String, Inventory> inventories = new HashMap<String, Inventory>();
 
-	Inventory diamondGeneratorBroken = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Diamond generator - Broken");
-	Inventory diamondGeneratorLvl1 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Diamond generator - Level 1");
-	Inventory diamondGeneratorLvl2 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Diamond generator - Level 2");
-	Inventory diamondGeneratorLvl3 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Diamond generator - Level 3");
-	Inventory goldGeneratorBroken = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Gold generator - Broken");
-	Inventory goldGeneratorLvl1 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Gold generator - Level 1");
-	Inventory goldGeneratorLvl2 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Gold generator - Level 2");
-	Inventory goldGeneratorLvl3 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Gold generator - Level 3");
-	Inventory goldGeneratorLvl4 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Gold generator - Level 4");
-	Inventory ironGeneratorBroken = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Iron generator - Broken");
-	Inventory ironGeneratorLvl1 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Iron generator - Level 1");
-	Inventory ironGeneratorLvl2 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Iron generator - Level 2");
-	Inventory ironGeneratorLvl3 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Iron generator - Level 3");
-	Inventory ironGeneratorLvl4 = Bukkit.createInventory(null, 27, ChatColor.GRAY + "Iron generator - Level 4");
+	Inventory diamondGeneratorBroken = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Diamond generator - Broken");
+	Inventory diamondGeneratorLvl1 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Diamond generator - Level 1");
+	Inventory diamondGeneratorLvl2 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Diamond generator - Level 2");
+	Inventory diamondGeneratorLvl3 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Diamond generator - Level 3");
+	Inventory goldGeneratorBroken = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Gold generator - Broken");
+	Inventory goldGeneratorLvl1 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Gold generator - Level 1");
+	Inventory goldGeneratorLvl2 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Gold generator - Level 2");
+	Inventory goldGeneratorLvl3 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Gold generator - Level 3");
+	Inventory goldGeneratorLvl4 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Gold generator - Level 4");
+	Inventory ironGeneratorBroken = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Iron generator - Broken");
+	Inventory ironGeneratorLvl1 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Iron generator - Level 1");
+	Inventory ironGeneratorLvl2 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Iron generator - Level 2");
+	Inventory ironGeneratorLvl3 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Iron generator - Level 3");
+	Inventory ironGeneratorLvl4 = Bukkit.createInventory(null, 27, ChatColor.DARK_GRAY + "Iron generator - Level 4");
 
 
 	public InventoryManager() {

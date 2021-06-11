@@ -28,7 +28,7 @@ public class BlockEvents implements Listener {
         if(plugin.getBlockManager().getBlocksPlaced().contains(e.getBlock().getLocation())) {
             plugin.getBlockManager().removeBlockPlaced(e.getBlock().getLocation());
         } else {
-            e.getPlayer().sendMessage(ChatColor.RED + "You can only place blocks that have been placed during the game.");
+            e.getPlayer().sendMessage(ChatColor.RED + "You can only break blocks that have been placed during the game.");
             e.setCancelled(true);
         }
     }

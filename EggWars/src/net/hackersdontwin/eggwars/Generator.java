@@ -1,13 +1,15 @@
 package net.hackersdontwin.eggwars;
 
 import net.minecraft.server.v1_12_R1.NBTTagCompound;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_12_R1.inventory.CraftItemStack;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class Generator {
 
@@ -20,6 +22,8 @@ public class Generator {
     private int priceToUpgrade;
     private Material typeForUpgrade;
 
+    private ArrayList<Player> players;
+
     public Generator(int maxAmount, int level, String type, Location location, int priceToUpgrade, Material typeForUpgrade) {
         this.currentAmount = 0;
         this.maxAmount = maxAmount;
@@ -29,6 +33,7 @@ public class Generator {
         this.typeForUpgrade = typeForUpgrade;
         this.priceToUpgrade = priceToUpgrade;
         items = new ArrayList<ItemStack>();
+        players = new ArrayList<Player>();
     }
 
     public String getType() {
@@ -75,34 +80,45 @@ public class Generator {
         switch(type) {
             case "iron":
                 ItemStack isIron = new ItemStack(Material.IRON_INGOT, 1);
+                ItemMeta isMetaIron = isIron.getItemMeta();
+                isMetaIron.setDisplayName(ChatColor.GRAY + "Iron Token");
+                isIron.setItemMeta(isMetaIron);
                 net.minecraft.server.v1_12_R1.ItemStack nmsItemIron = CraftItemStack.asNMSCopy(isIron);
-                NBTTagCompound tagIron = nmsItemIron.getTag();
-                tagIron.setString("item", UUID.randomUUID().toString());
+				NBTTagCompound tagIron = nmsItemIron.getTag() != null ? nmsItemIron.getTag() : new NBTTagCompound();
+                tagIron.setString("item", "item");
                 nmsItemIron.setTag(tagIron);
                 items.add(CraftItemStack.asBukkitCopy(nmsItemIron));
                 break;
             case "gold":
                 ItemStack isGold = new ItemStack(Material.GOLD_INGOT, 1);
+				ItemMeta isMetaGold = isGold.getItemMeta();
+				isMetaGold.setDisplayName(ChatColor.GOLD + "Gold Token");
+				isGold.setItemMeta(isMetaGold);
                 net.minecraft.server.v1_12_R1.ItemStack nmsItemGold = CraftItemStack.asNMSCopy(isGold);
-                NBTTagCompound tagGold = nmsItemGold.getTag();
-                tagGold.setString("item", UUID.randomUUID().toString());
+				NBTTagCompound tagGold = nmsItemGold.getTag() != null ? nmsItemGold.getTag() : new NBTTagCompound();
+                tagGold.setString("item", "item");
                 nmsItemGold.setTag(tagGold);
                 items.add(CraftItemStack.asBukkitCopy(nmsItemGold));
                 break;
             case "diamond":
                 ItemStack isDiamond = new ItemStack(Material.DIAMOND, 1);
+				ItemMeta isMetaDiamond = isDiamond.getItemMeta();
+				isMetaDiamond.setDisplayName(ChatColor.AQUA + "Diamond Token");
+				isDiamond.setItemMeta(isMetaDiamond);
                 net.minecraft.server.v1_12_R1.ItemStack nmsItemDiamond = CraftItemStack.asNMSCopy(isDiamond);
-                NBTTagCompound tagDiamond = nmsItemDiamond.getTag();
-//                tagDiamond.setString("item", UUID.randomUUID().toString());
+                NBTTagCompound tagDiamond = nmsItemDiamond.getTag() != null ? nmsItemDiamond.getTag() : new NBTTagCompound();
+                tagDiamond.setString("item", "item");
                 nmsItemDiamond.setTag(tagDiamond);
                 items.add(CraftItemStack.asBukkitCopy(nmsItemDiamond));
         }
         currentAmount++;
     }
 
-    public void removeItem() {
-        items.remove(items.size()-1);
-        currentAmount--;
+    public void removeItem(ItemStack is) {
+        items.remove(is);
+        if(!(currentAmount <= 0)) {
+			currentAmount--;
+		}
     }
 
     public void setPriceToUpgrade(int newPriceAmount) {

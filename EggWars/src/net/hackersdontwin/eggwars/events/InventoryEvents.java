@@ -24,38 +24,40 @@ public class InventoryEvents implements Listener {
         this.plugin = plugin;
     }
 
-    @EventHandler
-    public void onInventoryClick(InventoryClickEvent e) {
-        if(e.getClickedInventory() != null) {
-            InventoryAction inventoryAction = e.getAction();
-            if(inventoryAction == InventoryAction.MOVE_TO_OTHER_INVENTORY) {
-                e.setCancelled(true);
-            }
-            if(e.getClickedInventory().getTitle().startsWith(ChatColor.GRAY.toString())) {
-                e.setCancelled(true);
-            }
+//    @EventHandler
+//    public void onInventoryClick(InventoryClickEvent e) {
+//    	if(e.getClickedInventory() == null) {
+//    		return;
+//		}
+//		InventoryAction inventoryAction = e.getAction();
+//        if(e.getClickedInventory().getTitle().contains("generator")) {
+//            if(e.getRawSlot() == 15) {
+//                onGeneratorUpgrade((Player) e.getWhoClicked());
+//            }
+//			e.setCancelled(true);
+//		}
+//
+//		if(inventoryAction == InventoryAction.MOVE_TO_OTHER_INVENTORY) {
+//			e.setCancelled(true);
+//		}
+//    }
 
-            if(e.getRawSlot() == 15) {
-                onGeneratorUpgrade((Player) e.getWhoClicked());
-            }
-        }
-    }
-
-    @EventHandler
-    public void onInventoryMove(InventoryMoveItemEvent e) {
-        if(e.getDestination() != null) {
-            if(e.getDestination().getTitle().startsWith(ChatColor.GRAY.toString())) {
-                e.setCancelled(true);
-            }
-        }
-    }
+//    @EventHandler
+//    public void onInventoryMove(InventoryMoveItemEvent e) {
+//        if(e.getDestination() != null) {
+//            if(e.getDestination().getTitle().contains("generator")) {
+//                e.setCancelled(true);
+//            }
+//        }
+//    }
 
     @EventHandler
     public void onInventoryDrag(InventoryDragEvent e) {
-        if(e.getInventory() != null) {
-            if(e.getInventory().getTitle().startsWith(ChatColor.GRAY.toString())) {
-                e.setCancelled(true);
-            }
+		System.out.println("Test");
+		System.out.println(e.getView().getTopInventory().getType());
+		System.out.println(e.getView().getBottomInventory().getType());
+        if(e.getView().getTopInventory().getType() == InventoryType.CHEST) {
+			e.setCancelled(true);
         }
     }
 
@@ -94,14 +96,17 @@ public class InventoryEvents implements Listener {
                 if(generator.getLevel() == 1) {
                     generator.setPriceToUpgrade(10);
                     generator.setTypeForUpgrade(Material.DIAMOND);
+                    generator.setMaxAmount(3);
                     plugin.getInventoryManager().openInventory(player, "diamond", 1);
                 } else if(generator.getLevel() == 2) {
                     generator.setPriceToUpgrade(25);
                     generator.setTypeForUpgrade(Material.DIAMOND);
+					generator.setMaxAmount(5);
                     plugin.getInventoryManager().openInventory(player, "diamond", 2);
                 } else if(generator.getLevel() == 3) {
                     generator.setPriceToUpgrade(10000);
                     generator.setTypeForUpgrade(Material.BEDROCK);
+					generator.setMaxAmount(10);
                     plugin.getInventoryManager().openInventory(player, "diamond", 3);
                 }
                 Firework fwDiamond = (Firework) Bukkit.getWorld("world").spawn(new Location(generator.getLocation().getWorld(), generator.getLocation().getX()+0.5, generator.getLocation().getY()+0.5, generator.getLocation().getZ()+0.5), Firework.class);
@@ -126,18 +131,22 @@ public class InventoryEvents implements Listener {
                 if(generator.getLevel() == 1) {
                     generator.setPriceToUpgrade(10);
                     generator.setTypeForUpgrade(Material.GOLD_INGOT);
+					generator.setMaxAmount(5);
                     plugin.getInventoryManager().openInventory(player, "gold", 1);
                 } else if(generator.getLevel() == 2) {
                     generator.setPriceToUpgrade(10);
                     generator.setTypeForUpgrade(Material.DIAMOND);
+					generator.setMaxAmount(7);
                     plugin.getInventoryManager().openInventory(player, "gold", 2);
                 } else if(generator.getLevel() == 3) {
                     generator.setPriceToUpgrade(25);
                     generator.setTypeForUpgrade(Material.DIAMOND);
+					generator.setMaxAmount(13);
                     plugin.getInventoryManager().openInventory(player, "gold", 3);
                 } else if(generator.getLevel() == 4) {
                     generator.setPriceToUpgrade(10000);
                     generator.setTypeForUpgrade(Material.BEDROCK);
+					generator.setMaxAmount(24);
                     plugin.getInventoryManager().openInventory(player, "gold", 4);
                 }
                 Firework fwGold = (Firework) Bukkit.getWorld("world").spawn(new Location(generator.getLocation().getWorld(), generator.getLocation().getX()+0.5, generator.getLocation().getY()+0.5, generator.getLocation().getZ()+0.5), Firework.class);
@@ -162,18 +171,22 @@ public class InventoryEvents implements Listener {
                 if(generator.getLevel() == 1) {
                     generator.setPriceToUpgrade(20);
                     generator.setTypeForUpgrade(Material.IRON_INGOT);
+					generator.setMaxAmount(18);
                     plugin.getInventoryManager().openInventory(player, "iron", 1);
                 } else if(generator.getLevel() == 2) {
                     generator.setPriceToUpgrade(20);
                     generator.setTypeForUpgrade(Material.GOLD_INGOT);
+					generator.setMaxAmount(25);
                     plugin.getInventoryManager().openInventory(player, "iron", 2);
                 } else if(generator.getLevel() == 3) {
                     generator.setPriceToUpgrade(50);
                     generator.setTypeForUpgrade(Material.GOLD_INGOT);
+					generator.setMaxAmount(28);
                     plugin.getInventoryManager().openInventory(player, "iron", 3);
                 } else if(generator.getLevel() == 4) {
                     generator.setPriceToUpgrade(10000);
                     generator.setTypeForUpgrade(Material.BEDROCK);
+					generator.setMaxAmount(34);
                     plugin.getInventoryManager().openInventory(player, "iron", 4);
                 }
                 Firework fwIron = (Firework) Bukkit.getWorld("world").spawn(new Location(generator.getLocation().getWorld(), generator.getLocation().getX()+0.5, generator.getLocation().getY()+0.5, generator.getLocation().getZ()+0.5), Firework.class);

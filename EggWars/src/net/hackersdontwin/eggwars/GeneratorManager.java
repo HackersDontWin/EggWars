@@ -5,21 +5,21 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.util.Vector;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 public class GeneratorManager {
 
 	private EggWars plugin;
+	private Random random;
 
 	private HashMap<Location, Generator> generatorList = new HashMap<Location, Generator>();
 	private HashMap<Player, Location> currentOpenGenerator = new HashMap<Player, Location>();
 
 	public GeneratorManager(EggWars plugin) {
 		this.plugin = plugin;
+		random = new Random();
 	}
 
 	public HashMap<Location, Generator> getGeneratorList() {
@@ -64,7 +64,8 @@ public class GeneratorManager {
 
 			@Override
 			public void run() {
-
+				double randomValueX = -0.3 + (0.3 - -0.3) * random.nextDouble();
+				double randomValueZ = -0.3 + (0.3 - -0.3) * random.nextDouble();
 				Iterator iterator = generatorList.entrySet().iterator();
 				while(iterator.hasNext()) {
 					Map.Entry pair = (Map.Entry) iterator.next();
@@ -72,33 +73,122 @@ public class GeneratorManager {
 					if(generator.getType().equalsIgnoreCase("diamond")) {
 						switch (generator.getLevel()) {
 							case 1:
-								if(diamond1%timePassed == 1) {
-									generator.addItem();
-									ItemStack diamond = generator.getItems().get(generator.getItems().size()-1);
-									Bukkit.getWorld("world").dropItem(generator.getLocation().add(0.5,1.5,0.5), diamond);
+								if(timePassed%diamond1 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack diamond = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), diamond).setVelocity(new Vector(0,0,0));
+									}
 								}
 								break;
 							case 2:
-								if(diamond2%timePassed == 1) {
-									generator.addItem();
-									ItemStack diamond = generator.getItems().get(generator.getItems().size()-1);
-									Bukkit.getWorld("world").dropItem(generator.getLocation().add(0.5,1.5,0.5), diamond);
+								if(timePassed%diamond2 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack diamond = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), diamond).setVelocity(new Vector(0,0,0));
+									}
 								}
 								break;
 							case 3:
-								if(diamond3%timePassed == 1) {
-									generator.addItem();
-									ItemStack diamond = generator.getItems().get(generator.getItems().size()-1);
-									Bukkit.getWorld("world").dropItem(generator.getLocation().add(0.5,1.5,0.5), diamond);
+								if(timePassed%diamond3 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack diamond = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), diamond).setVelocity(new Vector(0,0,0));
+									}
+
 								}
 								break;
 							default:
 								break;
 						}
 					} else if(generator.getType().equalsIgnoreCase("gold")) {
+						switch (generator.getLevel()) {
+							case 1:
+								if(timePassed%gold1 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack gold = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), gold).setVelocity(new Vector(0,0,0));
+									}
+								}
+								break;
+							case 2:
+								if(timePassed%gold2 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack gold = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), gold).setVelocity(new Vector(0,0,0));
+									}
+								}
+								break;
+							case 3:
+								if(timePassed%gold3 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack gold = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), gold).setVelocity(new Vector(0,0,0));
+									}
 
+								}
+								break;
+							case 4:
+								if(timePassed%gold4 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack gold = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), gold).setVelocity(new Vector(0,0,0));
+									}
+
+								}
+								break;
+							default:
+								break;
+						}
 					} else if(generator.getType().equalsIgnoreCase("iron")) {
+						switch (generator.getLevel()) {
+							case 1:
+								if(timePassed%iron1 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack iron = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), iron).setVelocity(new Vector(0,0,0));
+									}
+								}
+								break;
+							case 2:
+								if(timePassed%iron2 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack iron = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), iron).setVelocity(new Vector(0,0,0));
+									}
+								}
+								break;
+							case 3:
+								if(timePassed%iron3 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack iron = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), iron).setVelocity(new Vector(0,0,0));
+									}
 
+								}
+								break;
+							case 4:
+								if(timePassed%iron4 == 0) {
+									if(generator.getCurrentAmount() < generator.getMaxAmount()) {
+										generator.addItem();
+										ItemStack iron = generator.getItems().get(generator.getItems().size()-1);
+										Bukkit.getWorld("world").dropItem(new Location(generator.getLocation().getWorld(), generator.getLocation().getX() + 0.5 + randomValueX, generator.getLocation().getY() + 1, generator.getLocation().getZ() + 0.5 + randomValueZ), iron).setVelocity(new Vector(0,0,0));
+									}
+
+								}
+								break;
+							default:
+								break;
+						}
 					}
 				}
 
